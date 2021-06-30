@@ -1,6 +1,6 @@
 {
   "name": "real-estate-dashboard",
-  "homepage":"https://github.com/rushikeshgadekar/dashboardUI",
+  "homepage":"./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
