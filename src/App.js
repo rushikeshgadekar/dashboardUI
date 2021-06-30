@@ -13,11 +13,11 @@ const Nav = styled.div`
   background-color: transparent;
 `;
 const Content = styled.div`
-  flex: 0.65;
+  flex: 0.6;
   background-color: transparent;
 `;
 const File = styled.div`
-  flex: 0.25;
+  flex: 0.3;
   background-color: transparent;
 `;
 
