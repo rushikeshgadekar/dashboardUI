@@ -18,7 +18,7 @@ const Parent = styled.div`
 const Welcome = styled.div`
   display: flex;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 30px;
   align-items: center;
 `;

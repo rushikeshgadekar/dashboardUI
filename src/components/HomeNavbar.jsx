@@ -6,11 +6,18 @@ import Files from "../assets/icons/files.svg";
 import Clients from "../assets/icons/clients.svg";
 import Listings from "../assets/icons/listings.svg";
 import Settings from "../assets/icons/settings.svg";
+import { NavLink } from "react-router-dom";
+
+const NavbarLink = styled(NavLink)`
+  text-decoration: none;
+  color: black;
+`;
 const Parent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 130px;
 `;
 const Img = styled.img`
   height: 30px;
@@ -75,11 +82,11 @@ const BtnName = styled.div`
 `;
 
 const btn_array = [
-  { id: 1, name: "Home", logo: Home },
-  { id: 2, name: "Files", logo: Files },
-  { id: 3, name: "Listings", logo: Listings },
-  { id: 4, name: "Clients", logo: Clients },
-  { id: 5, name: "Settings", logo: Settings },
+  { id: 1, name: "Home", logo: Home, link: "/" },
+  { id: 2, name: "Files", logo: Files, link: "/files" },
+  { id: 3, name: "Listings", logo: Listings, link: "/listing" },
+  { id: 4, name: "Clients", logo: Clients, link: "/clients" },
+  { id: 5, name: "Settings", logo: Settings, link: "/settings" },
 ];
 const handleClick = (e) => {
   console.log(e.target.getAttribute("id"));
@@ -94,15 +101,17 @@ const HomeNavbar = () => {
         <Heading> MakeHome</Heading>
       </Logo>
       {btn_array.map((button, index) => (
-        <Button
-          key={index}
-          id={button.id}
-          value={button.id}
-          onClick={handleClick}
-        >
-          <Img src={button.logo} alt="" />
-          <BtnName>{button.name}</BtnName>
-        </Button>
+        <NavbarLink to={button.link}>
+          <Button
+            key={index}
+            id={button.id}
+            value={button.id}
+            onClick={handleClick}
+          >
+            <Img src={button.logo} alt="" />
+            <BtnName>{button.name}</BtnName>
+          </Button>
+        </NavbarLink>
       ))}
     </Parent>
   );

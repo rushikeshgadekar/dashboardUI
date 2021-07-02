@@ -10,7 +10,6 @@ import Folder2 from "../assets/icons/folder2.svg";
 import Pdf from "../assets/icons/pdf.svg";
 import Image from "../assets/icons/img.svg";
 const Parent = styled.div`
-  height: 100vh;
   margin-left: -10px;
   padding-right: 30px;
 `;
@@ -145,7 +144,7 @@ const SubMain = styled.div`
 `;
 const Media = styled.div`
   font-size: 30px;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   font-family: "Railway", sans-serif;
 `;
